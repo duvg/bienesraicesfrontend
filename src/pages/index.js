@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 const Index = () => {
     return (
         <Layout>
-            <div>Index</div>
+            <h1>Index</h1>
         </Layout>
     );
 }

@@ -8,8 +8,43 @@ const Layout = ({children}) => {
         <>
             <Global
                 styles={css`
+                    html {
+                        font-size: 62.5%;
+                        box-sizing: border-bottom;
+                    }
+                    *, *:before, *:after {
+                        box-sizing: inherit;
+                    }
                     body {
-                        background-color: red;
+                        font-size: 1.6rem; // 16 pixeles
+                        line-height: 2;
+                        font-family: 'Lato', sans-serif;
+                    }
+                    h2, h2, h3 {
+                        margin: 0;
+                        line-height: 1.5;
+                    }
+
+                    h1, h2 {
+                        text-align: center;
+                        font-family: 'Lato', sans-serif;
+                        font-weight: 300;
+                    }
+                    h3 {
+                        font-family: 'Roboto', sans-serif;
+                    }
+                    ul {
+                        list-style: 0;
+                        margin: 0;
+                        padding: 0;
+                    }
+                    .container {
+                        max-width: 120rem; // 1200px
+                        margin: 0 auto;
+                        width: 95%;
+                    }
+                    img {
+                        max-width: 100%;
                     }
                 `}
             />
