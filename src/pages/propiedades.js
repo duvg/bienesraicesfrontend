@@ -3,12 +3,12 @@ import React from 'react';
 // Components
 import Layout from '../components/layout';
 
-const Index = () => {
+const Propiedades = () => {
     return (
         <Layout>
-            <h1>Index</h1>
+            <h1>Listado de propiedades</h1>
         </Layout>
     );
 }
  
-export default Index;
+export default Propiedades;
