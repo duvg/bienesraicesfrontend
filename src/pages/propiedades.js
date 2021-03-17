@@ -3,12 +3,12 @@ import React from 'react';
 // Components
 import Layout from '../components/layout';
 
-const Nosotros = () => {
+const Propiedades = () => {
     return (
         <Layout>
-            <h1>Desde nosotros</h1>
+            <h1>Listado de propiedades</h1>
         </Layout>
     );
 }
  
-export default Nosotros;
+export default Propiedades;
