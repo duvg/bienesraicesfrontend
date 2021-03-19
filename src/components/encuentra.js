@@ -26,7 +26,7 @@ const Encuentra = () => {
         }
     `);
 
-    console.log(imagen);
+    
     return (
         <ImageBackground
             tag="section"
