@@ -1,4 +1,4 @@
-import { gatsby, graphql, useStaticQuery} from 'gatsby';
+import { graphql, useStaticQuery} from 'gatsby';
 
 const usePropiedades = () => {
     const datos = useStaticQuery(graphql`
@@ -21,11 +21,14 @@ const usePropiedades = () => {
                         nombre
                     }
                     imagen {
-                        sharp: childImageSharp {
-                            fluid ( maxWidth: 600, maxHeight:400) {
-                                ...GatsbyImageSharpFluid_withWebp
-                            }
-                        }
+                       sharp: childImageSharp {
+							    gatsbyImageData(
+											width: 600
+                                            height: 400
+         									placeholder: BLURRED
+         									formats: [AUTO, WEBP, AVIF]
+                                )
+                      }
                     }
                 }
                

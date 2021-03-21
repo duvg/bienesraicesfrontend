@@ -33,7 +33,7 @@ const Iconos = ({banios, estacionamiento, habitaciones}) => {
             }
         }
     `);
-    console.log(iconos);
+    
     const imgIconos = iconos.edges;
     return (
         <ListadoIconos>

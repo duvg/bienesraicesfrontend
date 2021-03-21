@@ -13,7 +13,7 @@ const Layout = ({children}) => {
                 styles={css`
                     html {
                         font-size: 62.5%;
-                        box-sizing: border-bottom;
+                        box-sizing: border-box;
                     }
                     *, *:before, *:after {
                         box-sizing: inherit;
@@ -37,7 +37,7 @@ const Layout = ({children}) => {
                         font-family: 'Roboto', sans-serif;
                     }
                     ul {
-                        list-style: 0;
+                        list-style-type: none;
                         margin: 0;
                         padding: 0;
                     }
