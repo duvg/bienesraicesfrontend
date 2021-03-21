@@ -35,7 +35,7 @@ const ListadoPropiedades = () => {
     // Filtrado de propiedades
     const { categoria, FiltroUI } = useFiltro();
 
-    console.log(categoria);
+    
     
     useEffect(() => {
         if(categoria) {
@@ -45,7 +45,7 @@ const ListadoPropiedades = () => {
             setFiltradas(propiedades);
         }
         
-    }, [categoria]);
+    }, [categoria, propiedades]);
 
     return (
         <> 
