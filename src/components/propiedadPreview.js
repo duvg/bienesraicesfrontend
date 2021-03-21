@@ -2,14 +2,26 @@ import React from 'react';
 
 // Plugins 
 import styled from '@emotion/styled';
-import { css } from '@emotion/react';
-import { GatsbyImage } from 'gatsby-plugin-image';
-import BackgroundImage from 'gatsby-background-image';
-import Image from 'gatsby-image';
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import urlSlug from 'url-slug';
 // Components
+import { Link } from 'gatsby'; 
 import Iconos from './iconos';
 
 // Styled components
+const Boton = styled(Link)`
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #75AB00;
+    width: 100%;
+    color: #FFFFFF;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-weight:  700;
+    text-transform: uppercase;
+`;
+
 const Card = styled.div`
     border: 1px solid #E1E1E1;
     img {
@@ -34,13 +46,14 @@ const Content = styled.div`
 
 const PropiedadPreview = ({ propiedad }) => {
     
-    const {nombre, precio, banios, habitaciones, estacionamiento, descripcion, imagen} = propiedad;
-
-    console.log(imagen);
+    const {nombre, precio, banios, habitaciones, estacionamiento, imagen} = propiedad;
+    const img = getImage(imagen.sharp.gatsbyImageData);
+    
     return (
         <Card>
-            <Image
-                fluid={imagen.sharp.fluid}
+
+            <GatsbyImage
+                image={img}
             />
             <Content>
                 <h3>{nombre}</h3>
@@ -50,6 +63,10 @@ const PropiedadPreview = ({ propiedad }) => {
                     estacionamiento={estacionamiento}
                     habitaciones={habitaciones}
                 />
+
+                <Boton to={ urlSlug( nombre ) }>
+                    Ver Propiedad
+                </Boton>
             </Content>
         </Card>
     );
