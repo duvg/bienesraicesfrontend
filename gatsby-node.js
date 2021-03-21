@@ -30,7 +30,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const propiedades = resultado.data.allStrapiPropiedades.nodes;
     
     // Crear templates para paginas
-    console.log(JSON.stringify(paginas));
+    
     paginas.forEach( pagina => {
         actions.createPage({
             path: urlSlug( pagina.nombre ),

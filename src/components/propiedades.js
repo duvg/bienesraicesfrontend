@@ -79,7 +79,7 @@ export const query = graphql`
 `;
 
 const Propiedades = ({data: { allStrapiPropiedades: { nodes }}}) => {
-    console.log(nodes);
+    
     const { 
         nombre,
         descripcion,
@@ -92,8 +92,7 @@ const Propiedades = ({data: { allStrapiPropiedades: { nodes }}}) => {
     } = nodes[0];
 
     const img = getImage(imagen.sharp.gatsbyImageData);
-    
-    //const imgAgente = getImage(agentes.imagen.sharp.gatsbyImageData);
+
     
     return (
         <Layout>

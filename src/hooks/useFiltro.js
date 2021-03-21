@@ -18,7 +18,7 @@ const Select= styled.select`
     padding: 1rem;
     appearance: none;
     border: none;
-    font-family: 'Lato' sans-serif;
+    sharp-brown-8ef887
 `;
 
 

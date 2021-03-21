@@ -54,6 +54,7 @@ const PropiedadPreview = ({ propiedad }) => {
 
             <GatsbyImage
                 image={img}
+                alt={nombre}
             />
             <Content>
                 <h3>{nombre}</h3>

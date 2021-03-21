@@ -47,12 +47,10 @@ const Propiedades = ({data: { allStrapiPaginas: { nodes }}}) => {
     const { nombre, contenido, imagen } = nodes[0];
     const img = getImage(imagen.sharp.gatsbyImageData);
     
-    //const imgAgente = getImage(agentes.imagen.sharp.gatsbyImageData);
-    console.log(nodes);
     return (
         <Layout>
             
-           <main classNAme="container">
+           <main className="container">
                 <h1>{nombre}</h1>
                 <ContentPage>
                     <GatsbyImage

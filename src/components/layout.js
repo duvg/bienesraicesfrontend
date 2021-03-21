@@ -37,7 +37,7 @@ const Layout = ({children}) => {
                         font-family: 'Roboto', sans-serif;
                     }
                     ul {
-                        list-style: 0;
+                        list-style-type: none;
                         margin: 0;
                         padding: 0;
                     }
